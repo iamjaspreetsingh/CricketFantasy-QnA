@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "EIP712BaseUpg",
+  "sourceName": "contracts/EIP712BaseUpg.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220b76c5b3b48f9032085fdb7569db5c4a8d553bc896a5b6bfbd73626c4c82bb70c64736f6c63430007000033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220b76c5b3b48f9032085fdb7569db5c4a8d553bc896a5b6bfbd73626c4c82bb70c64736f6c63430007000033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,2875 @@
+{
+  "version": "3",
+  "log": [
+    {
+      "SafeMath": {
+        "version": {
+          "withMetadata": "4ce33ca6a8b08be1c95e619bc6c46c52bef7ce03b82dfd1c399467619feeefd6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "version": {
+          "withMetadata": "db94959bd455a96d85273ccb6a1aaa1633f24405d38722ea0a66c005497e83e6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712BaseUpg": {
+        "version": {
+          "withMetadata": "5b2cf4d6c6d2857916017a28a70c9755ccd32dc43e610a98876b5e7476d0c814",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712BaseUpg",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712BaseUpg.sol:17"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxnUpg": {
+        "version": {
+          "withMetadata": "db0f8dcf3101cbf7b877280dec139b6878fdd81db62230ef120873e6dc1ae441",
+          "withoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a",
+          "linkedWithoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a"
+        },
+        "inherit": [
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxnUpg",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxnUpg.sol:16"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:25"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:30"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SportsFantasy": {
+        "version": {
+          "withMetadata": "c4e94b5a83c661dbe1c9bbdbc7ecd3cf0006b22fabfc47b829bb7ec12914fab4",
+          "withoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937",
+          "linkedWithoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937"
+        },
+        "inherit": [
+          "EIP712MetaTxnUpg",
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SportsFantasy",
+              "label": "optionsSelected",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))",
+              "src": "contracts/SportsFantasy.sol:20"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rewardProvided",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "contracts/SportsFantasy.sol:23"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "feeAddress",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:44"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "sdToken",
+              "type": "t_contract(IERC20)432",
+              "src": "contracts/SportsFantasy.sol:46"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "allContestParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)1222_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:52"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rankParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)1222_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:55"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/SportsFantasy.sol:57"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "questions",
+              "type": "t_mapping(t_uint256,t_struct(Question)1213_storage)",
+              "src": "contracts/SportsFantasy.sol:60"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "naam",
+              "type": "t_mapping(t_address,t_string_storage)",
+              "src": "contracts/SportsFantasy.sol:62"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:336"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/SportsFantasy.sol:337"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/SportsFantasy.sol:338"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => bool)))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(uint256 => mapping(uint256 => bool))"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_contract(IERC20)432": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_array(t_struct(Participant)1222_storage)dyn_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Participant[])"
+            },
+            "t_array(t_struct(Participant)1222_storage)dyn_storage": {
+              "label": "struct SportsFantasy.Participant[]"
+            },
+            "t_struct(Participant)1222_storage": {
+              "label": "struct SportsFantasy.Participant",
+              "members": [
+                {
+                  "label": "_add",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_points",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_uint256,t_struct(Question)1213_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Question)"
+            },
+            "t_struct(Question)1213_storage": {
+              "label": "struct SportsFantasy.Question",
+              "members": [
+                {
+                  "label": "author",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_type",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "qcontent",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "vote_price",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "correct_ans_id",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "options",
+                  "type": "t_array(t_struct(Option)1162_storage)6_storage"
+                },
+                {
+                  "label": "totalCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "winners",
+                  "type": "t_array(t_address)dyn_storage"
+                },
+                {
+                  "label": "winnersnames",
+                  "type": "t_array(t_string_storage)dyn_storage"
+                },
+                {
+                  "label": "correct_answer_str",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "correct_ans_reason",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "distributed_each",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalWinners",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "status",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "stopped",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "declared_result",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_array(t_struct(Option)1162_storage)6_storage": {
+              "label": "struct SportsFantasy.Option[6]"
+            },
+            "t_struct(Option)1162_storage": {
+              "label": "struct SportsFantasy.Option",
+              "members": [
+                {
+                  "label": "name",
+                  "type": "t_uint8"
+                },
+                {
+                  "label": "voteCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "voters",
+                  "type": "t_array(t_address)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_string_storage)dyn_storage": {
+              "label": "string[]"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_string_storage)": {
+              "label": "mapping(address => string)"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "BaseRelayRecipient": {
+        "inherit": [
+          "IRelayRecipient"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "state-variable-assignment",
+            "name": "trustedForwarder",
+            "src": "contracts/BaseRelayRecipient.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "BaseRelayRecipient",
+              "label": "trustedForwarder",
+              "type": "t_address",
+              "src": "contracts/BaseRelayRecipient.sol:15"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IRelayRecipient": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "SafeMath": {
+        "version": {
+          "withMetadata": "4ce33ca6a8b08be1c95e619bc6c46c52bef7ce03b82dfd1c399467619feeefd6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "version": {
+          "withMetadata": "db94959bd455a96d85273ccb6a1aaa1633f24405d38722ea0a66c005497e83e6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712Base": {
+        "version": {
+          "withMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776",
+          "withoutMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776",
+          "linkedWithoutMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "EIP712Base",
+            "src": "contracts/EIP712Base.sol:18"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712Base",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712Base.sol:16"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712BaseUpg": {
+        "version": {
+          "withMetadata": "5b2cf4d6c6d2857916017a28a70c9755ccd32dc43e610a98876b5e7476d0c814",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712BaseUpg",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712BaseUpg.sol:17"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxn": {
+        "version": {
+          "withMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5",
+          "withoutMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5",
+          "linkedWithoutMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5"
+        },
+        "inherit": [
+          "EIP712Base"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "EIP712MetaTxn",
+            "src": "contracts/EIP712MetaTxn.sol:27"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxn",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxn.sol:14"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxnUpg": {
+        "version": {
+          "withMetadata": "db0f8dcf3101cbf7b877280dec139b6878fdd81db62230ef120873e6dc1ae441",
+          "withoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a",
+          "linkedWithoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a"
+        },
+        "inherit": [
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxnUpg",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxnUpg.sol:16"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20SD": {
+        "version": {
+          "withMetadata": "60982484f4d94a8b63956ea5ab718dd296fc040d0fce7c5479188d53ebf30805",
+          "withoutMetadata": "7bddaa92fd7c2cea8820a5acd458d23a82621f70fae405ba8d4082cbd5246958",
+          "linkedWithoutMetadata": "7bddaa92fd7c2cea8820a5acd458d23a82621f70fae405ba8d4082cbd5246958"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20SD",
+            "src": "contracts/ERC20SD.sol:58"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20SD",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/ERC20SD.sol:39"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/ERC20SD.sol:41"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/ERC20SD.sol:43"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20SD.sol:45"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20SD.sol:46"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/ERC20SD.sol:47"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:25"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:30"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "MultiOwnable": {
+        "inherit": [
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MultiOwnable",
+            "src": "contracts/MultiOwnable.sol:23"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "MultiOwnable",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/MultiOwnable.sol:9"
+            },
+            {
+              "contract": "MultiOwnable",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/MultiOwnable.sol:10"
+            },
+            {
+              "contract": "MultiOwnable",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/MultiOwnable.sol:11"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Owned": {
+        "inherit": [
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Owned",
+            "src": "contracts/Owned.sol:11"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Owned",
+              "label": "owner",
+              "type": "t_address",
+              "src": "contracts/Owned.sol:8"
+            },
+            {
+              "contract": "Owned",
+              "label": "nominatedOwner",
+              "type": "t_address",
+              "src": "contracts/Owned.sol:9"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SportsFantasy": {
+        "version": {
+          "withMetadata": "c4e94b5a83c661dbe1c9bbdbc7ecd3cf0006b22fabfc47b829bb7ec12914fab4",
+          "withoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937",
+          "linkedWithoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937"
+        },
+        "inherit": [
+          "EIP712MetaTxnUpg",
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SportsFantasy",
+              "label": "optionsSelected",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))",
+              "src": "contracts/SportsFantasy.sol:20"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rewardProvided",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "contracts/SportsFantasy.sol:23"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "feeAddress",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:44"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "sdToken",
+              "type": "t_contract(IERC20)432",
+              "src": "contracts/SportsFantasy.sol:46"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "allContestParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:52"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rankParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:55"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/SportsFantasy.sol:57"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "questions",
+              "type": "t_mapping(t_uint256,t_struct(Question)2401_storage)",
+              "src": "contracts/SportsFantasy.sol:60"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "naam",
+              "type": "t_mapping(t_address,t_string_storage)",
+              "src": "contracts/SportsFantasy.sol:62"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:336"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/SportsFantasy.sol:337"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/SportsFantasy.sol:338"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => bool)))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(uint256 => mapping(uint256 => bool))"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_contract(IERC20)432": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Participant[])"
+            },
+            "t_array(t_struct(Participant)2410_storage)dyn_storage": {
+              "label": "struct SportsFantasy.Participant[]"
+            },
+            "t_struct(Participant)2410_storage": {
+              "label": "struct SportsFantasy.Participant",
+              "members": [
+                {
+                  "label": "_add",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_points",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_uint256,t_struct(Question)2401_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Question)"
+            },
+            "t_struct(Question)2401_storage": {
+              "label": "struct SportsFantasy.Question",
+              "members": [
+                {
+                  "label": "author",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_type",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "qcontent",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "vote_price",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "correct_ans_id",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "options",
+                  "type": "t_array(t_struct(Option)2350_storage)6_storage"
+                },
+                {
+                  "label": "totalCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "winners",
+                  "type": "t_array(t_address)dyn_storage"
+                },
+                {
+                  "label": "winnersnames",
+                  "type": "t_array(t_string_storage)dyn_storage"
+                },
+                {
+                  "label": "correct_answer_str",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "correct_ans_reason",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "distributed_each",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalWinners",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "status",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "stopped",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "declared_result",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_array(t_struct(Option)2350_storage)6_storage": {
+              "label": "struct SportsFantasy.Option[6]"
+            },
+            "t_struct(Option)2350_storage": {
+              "label": "struct SportsFantasy.Option",
+              "members": [
+                {
+                  "label": "name",
+                  "type": "t_uint8"
+                },
+                {
+                  "label": "voteCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "voters",
+                  "type": "t_array(t_address)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_string_storage)dyn_storage": {
+              "label": "string[]"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_string_storage)": {
+              "label": "mapping(address => string)"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "SafeMath": {
+        "version": {
+          "withMetadata": "4ce33ca6a8b08be1c95e619bc6c46c52bef7ce03b82dfd1c399467619feeefd6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "version": {
+          "withMetadata": "db94959bd455a96d85273ccb6a1aaa1633f24405d38722ea0a66c005497e83e6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712Base": {
+        "version": {
+          "withMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776",
+          "withoutMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776",
+          "linkedWithoutMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "EIP712Base",
+            "src": "contracts/EIP712Base.sol:18"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712Base",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712Base.sol:16"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712BaseUpg": {
+        "version": {
+          "withMetadata": "5b2cf4d6c6d2857916017a28a70c9755ccd32dc43e610a98876b5e7476d0c814",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712BaseUpg",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712BaseUpg.sol:17"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxn": {
+        "version": {
+          "withMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5",
+          "withoutMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5",
+          "linkedWithoutMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5"
+        },
+        "inherit": [
+          "EIP712Base"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "EIP712MetaTxn",
+            "src": "contracts/EIP712MetaTxn.sol:27"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxn",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxn.sol:14"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxnUpg": {
+        "version": {
+          "withMetadata": "db0f8dcf3101cbf7b877280dec139b6878fdd81db62230ef120873e6dc1ae441",
+          "withoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a",
+          "linkedWithoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a"
+        },
+        "inherit": [
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxnUpg",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxnUpg.sol:16"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20SD": {
+        "version": {
+          "withMetadata": "60982484f4d94a8b63956ea5ab718dd296fc040d0fce7c5479188d53ebf30805",
+          "withoutMetadata": "7bddaa92fd7c2cea8820a5acd458d23a82621f70fae405ba8d4082cbd5246958",
+          "linkedWithoutMetadata": "7bddaa92fd7c2cea8820a5acd458d23a82621f70fae405ba8d4082cbd5246958"
+        },
+        "inherit": [
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20SD",
+            "src": "contracts/ERC20SD.sol:58"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20SD",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/ERC20SD.sol:39"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/ERC20SD.sol:41"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/ERC20SD.sol:43"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20SD.sol:45"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20SD.sol:46"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/ERC20SD.sol:47"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:25"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:30"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "MultiOwnable": {
+        "inherit": [
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MultiOwnable",
+            "src": "contracts/MultiOwnable.sol:23"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "MultiOwnable",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/MultiOwnable.sol:9"
+            },
+            {
+              "contract": "MultiOwnable",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/MultiOwnable.sol:10"
+            },
+            {
+              "contract": "MultiOwnable",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/MultiOwnable.sol:11"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Owned": {
+        "inherit": [
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Owned",
+            "src": "contracts/Owned.sol:11"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Owned",
+              "label": "owner",
+              "type": "t_address",
+              "src": "contracts/Owned.sol:8"
+            },
+            {
+              "contract": "Owned",
+              "label": "nominatedOwner",
+              "type": "t_address",
+              "src": "contracts/Owned.sol:9"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SportsFantasy": {
+        "version": {
+          "withMetadata": "c4e94b5a83c661dbe1c9bbdbc7ecd3cf0006b22fabfc47b829bb7ec12914fab4",
+          "withoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937",
+          "linkedWithoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937"
+        },
+        "inherit": [
+          "EIP712MetaTxnUpg",
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SportsFantasy",
+              "label": "optionsSelected",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))",
+              "src": "contracts/SportsFantasy.sol:20"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rewardProvided",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "contracts/SportsFantasy.sol:23"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "feeAddress",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:44"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "sdToken",
+              "type": "t_contract(IERC20)432",
+              "src": "contracts/SportsFantasy.sol:46"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "allContestParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:52"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rankParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:55"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/SportsFantasy.sol:57"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "questions",
+              "type": "t_mapping(t_uint256,t_struct(Question)2401_storage)",
+              "src": "contracts/SportsFantasy.sol:60"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "naam",
+              "type": "t_mapping(t_address,t_string_storage)",
+              "src": "contracts/SportsFantasy.sol:62"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:336"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/SportsFantasy.sol:337"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/SportsFantasy.sol:338"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => bool)))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(uint256 => mapping(uint256 => bool))"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_contract(IERC20)432": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Participant[])"
+            },
+            "t_array(t_struct(Participant)2410_storage)dyn_storage": {
+              "label": "struct SportsFantasy.Participant[]"
+            },
+            "t_struct(Participant)2410_storage": {
+              "label": "struct SportsFantasy.Participant",
+              "members": [
+                {
+                  "label": "_add",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_points",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_uint256,t_struct(Question)2401_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Question)"
+            },
+            "t_struct(Question)2401_storage": {
+              "label": "struct SportsFantasy.Question",
+              "members": [
+                {
+                  "label": "author",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_type",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "qcontent",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "vote_price",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "correct_ans_id",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "options",
+                  "type": "t_array(t_struct(Option)2350_storage)6_storage"
+                },
+                {
+                  "label": "totalCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "winners",
+                  "type": "t_array(t_address)dyn_storage"
+                },
+                {
+                  "label": "winnersnames",
+                  "type": "t_array(t_string_storage)dyn_storage"
+                },
+                {
+                  "label": "correct_answer_str",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "correct_ans_reason",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "distributed_each",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalWinners",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "status",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "stopped",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "declared_result",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_array(t_struct(Option)2350_storage)6_storage": {
+              "label": "struct SportsFantasy.Option[6]"
+            },
+            "t_struct(Option)2350_storage": {
+              "label": "struct SportsFantasy.Option",
+              "members": [
+                {
+                  "label": "name",
+                  "type": "t_uint8"
+                },
+                {
+                  "label": "voteCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "voters",
+                  "type": "t_array(t_address)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_string_storage)dyn_storage": {
+              "label": "string[]"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_string_storage)": {
+              "label": "mapping(address => string)"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "BaseRelayRecipient": {
+        "inherit": [
+          "IRelayRecipient"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "state-variable-assignment",
+            "name": "trustedForwarder",
+            "src": "contracts/BaseRelayRecipient.sol:15"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "BaseRelayRecipient",
+              "label": "trustedForwarder",
+              "type": "t_address",
+              "src": "contracts/BaseRelayRecipient.sol:15"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IRelayRecipient": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "SafeMath": {
+        "version": {
+          "withMetadata": "4ce33ca6a8b08be1c95e619bc6c46c52bef7ce03b82dfd1c399467619feeefd6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "AddressUpgradeable": {
+        "version": {
+          "withMetadata": "db94959bd455a96d85273ccb6a1aaa1633f24405d38722ea0a66c005497e83e6",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712Base": {
+        "version": {
+          "withMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776",
+          "withoutMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776",
+          "linkedWithoutMetadata": "75579098174e99db709bc8244bafb4a24e499589d35cd9d2c1bae04cb42bc776"
+        },
+        "inherit": [],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "EIP712Base",
+            "src": "contracts/EIP712Base.sol:18"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712Base",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712Base.sol:16"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712BaseUpg": {
+        "version": {
+          "withMetadata": "5b2cf4d6c6d2857916017a28a70c9755ccd32dc43e610a98876b5e7476d0c814",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712BaseUpg",
+              "label": "domainSeperator",
+              "type": "t_bytes32",
+              "src": "contracts/EIP712BaseUpg.sol:17"
+            }
+          ],
+          "types": {
+            "t_bytes32": {
+              "label": "bytes32"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxn": {
+        "version": {
+          "withMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5",
+          "withoutMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5",
+          "linkedWithoutMetadata": "2eaff8e4351c877b32ff19efa6a4c4850a6a20c2ac3b26b539bbd3cc340c02e5"
+        },
+        "inherit": [
+          "EIP712Base"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "EIP712MetaTxn",
+            "src": "contracts/EIP712MetaTxn.sol:27"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxn",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxn.sol:14"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "EIP712MetaTxnUpg": {
+        "version": {
+          "withMetadata": "db0f8dcf3101cbf7b877280dec139b6878fdd81db62230ef120873e6dc1ae441",
+          "withoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a",
+          "linkedWithoutMetadata": "8b72d6527839b38e24aab170b311074ef1dd28e783da0190462f0bbbe985f43a"
+        },
+        "inherit": [
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "EIP712MetaTxnUpg",
+              "label": "nonces",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/EIP712MetaTxnUpg.sol:16"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20SD": {
+        "version": {
+          "withMetadata": "429e443508827be3b77b21a49a7375b1a8198dd333f101d8a47fb2ca804b3c32",
+          "withoutMetadata": "429e443508827be3b77b21a49a7375b1a8198dd333f101d8a47fb2ca804b3c32",
+          "linkedWithoutMetadata": "429e443508827be3b77b21a49a7375b1a8198dd333f101d8a47fb2ca804b3c32"
+        },
+        "inherit": [
+          "IERC20",
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20SD",
+            "src": "contracts/ERC20SD.sol:54"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20SD",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/ERC20SD.sol:35"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/ERC20SD.sol:37"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/ERC20SD.sol:39"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20SD.sol:41"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/ERC20SD.sol:42"
+            },
+            {
+              "contract": "ERC20SD",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/ERC20SD.sol:43"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Initializable": {
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:25"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "contracts/Initializable.sol:30"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "MultiOwnable": {
+        "inherit": [
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MultiOwnable",
+            "src": "contracts/MultiOwnable.sol:23"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "MultiOwnable",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/MultiOwnable.sol:9"
+            },
+            {
+              "contract": "MultiOwnable",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/MultiOwnable.sol:10"
+            },
+            {
+              "contract": "MultiOwnable",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/MultiOwnable.sol:11"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Owned": {
+        "inherit": [
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Owned",
+            "src": "contracts/Owned.sol:11"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Owned",
+              "label": "owner",
+              "type": "t_address",
+              "src": "contracts/Owned.sol:8"
+            },
+            {
+              "contract": "Owned",
+              "label": "nominatedOwner",
+              "type": "t_address",
+              "src": "contracts/Owned.sol:9"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SD": {
+        "version": {
+          "withMetadata": "c68483cd3786843bf0181397b151387063710ee92e31338049aec17829f00969",
+          "withoutMetadata": "c68483cd3786843bf0181397b151387063710ee92e31338049aec17829f00969",
+          "linkedWithoutMetadata": "c68483cd3786843bf0181397b151387063710ee92e31338049aec17829f00969"
+        },
+        "inherit": [
+          "Owned",
+          "EIP712MetaTxn",
+          "EIP712Base"
+        ],
+        "libraries": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "SD",
+            "src": "contracts/SD.sol:23"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "ERC20Address",
+            "src": "contracts/SD.sol:12"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "sdToken",
+            "src": "contracts/SD.sol:13"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SD",
+              "label": "ERC20Address",
+              "type": "t_address",
+              "src": "contracts/SD.sol:12"
+            },
+            {
+              "contract": "SD",
+              "label": "sdToken",
+              "type": "t_contract(IERC20)432",
+              "src": "contracts/SD.sol:13"
+            },
+            {
+              "contract": "SD",
+              "label": "contests",
+              "type": "t_mapping(t_uint256,t_struct(Contest)2329_storage)",
+              "src": "contracts/SD.sol:22"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            },
+            "t_contract(IERC20)432": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_struct(Contest)2329_storage)": {
+              "label": "mapping(uint256 => struct SD.Contest)"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_struct(Contest)2329_storage": {
+              "label": "struct SD.Contest",
+              "members": [
+                {
+                  "label": "pfee",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "reward",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "participated",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_bool": {
+              "label": "bool"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SportsDapp": {
+        "version": {
+          "withMetadata": "7d2adeeec7343dbba3c8b841b9e117bd236c0b7daa6d9397480a5ec917f5b762",
+          "withoutMetadata": "2a0002afc6149a4a6be5e5f3d84a5e2b5d77f317d6ed9a9b780b4302a9c71cdf",
+          "linkedWithoutMetadata": "2a0002afc6149a4a6be5e5f3d84a5e2b5d77f317d6ed9a9b780b4302a9c71cdf"
+        },
+        "inherit": [
+          "EIP712MetaTxnUpg",
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SportsDapp",
+              "label": "optionsSelected",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))",
+              "src": "contracts/SportsDapp.sol:23"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "rewardProvided",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "contracts/SportsDapp.sol:26"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "feeAddress",
+              "type": "t_address",
+              "src": "contracts/SportsDapp.sol:50"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "sdToken",
+              "type": "t_contract(IERC20)432",
+              "src": "contracts/SportsDapp.sol:52"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "contests",
+              "type": "t_mapping(t_uint256,t_struct(Contest)2557_storage)",
+              "src": "contracts/SportsDapp.sol:74"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "team",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(Team)2574_storage))",
+              "src": "contracts/SportsDapp.sol:75"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "playerPoints",
+              "type": "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))",
+              "src": "contracts/SportsDapp.sol:78"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "allContestParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2595_storage)dyn_storage)",
+              "src": "contracts/SportsDapp.sol:85"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "rankParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2595_storage)dyn_storage)",
+              "src": "contracts/SportsDapp.sol:88"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/SportsDapp.sol:90"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "questions",
+              "type": "t_mapping(t_uint256,t_struct(Question)2539_storage)",
+              "src": "contracts/SportsDapp.sol:93"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "naam",
+              "type": "t_mapping(t_address,t_string_storage)",
+              "src": "contracts/SportsDapp.sol:95"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/SportsDapp.sol:486"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/SportsDapp.sol:487"
+            },
+            {
+              "contract": "SportsDapp",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/SportsDapp.sol:488"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => bool)))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(uint256 => mapping(uint256 => bool))"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_contract(IERC20)432": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_struct(Contest)2557_storage)": {
+              "label": "mapping(uint256 => struct SportsDapp.Contest)"
+            },
+            "t_struct(Contest)2557_storage": {
+              "label": "struct SportsDapp.Contest",
+              "members": [
+                {
+                  "label": "pfee",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "reward",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalParticipants",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "declaredResult",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "sorted",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "winningBreakdown",
+                  "type": "t_array(t_uint256)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_struct(Team)2574_storage))": {
+              "label": "mapping(uint256 => mapping(address => struct SportsDapp.Team))"
+            },
+            "t_mapping(t_address,t_struct(Team)2574_storage)": {
+              "label": "mapping(address => struct SportsDapp.Team)"
+            },
+            "t_struct(Team)2574_storage": {
+              "label": "struct SportsDapp.Team",
+              "members": [
+                {
+                  "label": "playerIDs",
+                  "type": "t_array(t_uint256)9_storage"
+                },
+                {
+                  "label": "captainID",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "vcID",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalPoints",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "rewarded",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "updated",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "participated",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_array(t_uint256)9_storage": {
+              "label": "uint256[9]"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(uint256 => mapping(uint256 => uint256))"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)"
+            },
+            "t_mapping(t_uint256,t_array(t_struct(Participant)2595_storage)dyn_storage)": {
+              "label": "mapping(uint256 => struct SportsDapp.Participant[])"
+            },
+            "t_array(t_struct(Participant)2595_storage)dyn_storage": {
+              "label": "struct SportsDapp.Participant[]"
+            },
+            "t_struct(Participant)2595_storage": {
+              "label": "struct SportsDapp.Participant",
+              "members": [
+                {
+                  "label": "_add",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_points",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_uint256,t_struct(Question)2539_storage)": {
+              "label": "mapping(uint256 => struct SportsDapp.Question)"
+            },
+            "t_struct(Question)2539_storage": {
+              "label": "struct SportsDapp.Question",
+              "members": [
+                {
+                  "label": "author",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_type",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "qcontent",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "vote_price",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "correct_ans_id",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "options",
+                  "type": "t_array(t_struct(Option)2488_storage)6_storage"
+                },
+                {
+                  "label": "totalCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "winners",
+                  "type": "t_array(t_address)dyn_storage"
+                },
+                {
+                  "label": "winnersnames",
+                  "type": "t_array(t_string_storage)dyn_storage"
+                },
+                {
+                  "label": "correct_answer_str",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "correct_ans_reason",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "distributed_each",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalWinners",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "status",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "stopped",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "declared_result",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_array(t_struct(Option)2488_storage)6_storage": {
+              "label": "struct SportsDapp.Option[6]"
+            },
+            "t_struct(Option)2488_storage": {
+              "label": "struct SportsDapp.Option",
+              "members": [
+                {
+                  "label": "name",
+                  "type": "t_uint8"
+                },
+                {
+                  "label": "voteCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "voters",
+                  "type": "t_array(t_address)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_string_storage)dyn_storage": {
+              "label": "string[]"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_string_storage)": {
+              "label": "mapping(address => string)"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SportsFantasy": {
+        "version": {
+          "withMetadata": "c4e94b5a83c661dbe1c9bbdbc7ecd3cf0006b22fabfc47b829bb7ec12914fab4",
+          "withoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937",
+          "linkedWithoutMetadata": "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937"
+        },
+        "inherit": [
+          "EIP712MetaTxnUpg",
+          "EIP712BaseUpg",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMath"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "SportsFantasy",
+              "label": "optionsSelected",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))",
+              "src": "contracts/SportsFantasy.sol:20"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rewardProvided",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "src": "contracts/SportsFantasy.sol:23"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "feeAddress",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:44"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "sdToken",
+              "type": "t_contract(IERC20)432",
+              "src": "contracts/SportsFantasy.sol:46"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "allContestParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)4456_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:52"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "rankParticipants",
+              "type": "t_mapping(t_uint256,t_array(t_struct(Participant)4456_storage)dyn_storage)",
+              "src": "contracts/SportsFantasy.sol:55"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "balanceOf",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/SportsFantasy.sol:57"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "questions",
+              "type": "t_mapping(t_uint256,t_struct(Question)4447_storage)",
+              "src": "contracts/SportsFantasy.sol:60"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "naam",
+              "type": "t_mapping(t_address,t_string_storage)",
+              "src": "contracts/SportsFantasy.sol:62"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "manager",
+              "type": "t_address",
+              "src": "contracts/SportsFantasy.sol:336"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "Admins",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/SportsFantasy.sol:337"
+            },
+            {
+              "contract": "SportsFantasy",
+              "label": "AdminByAddress",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/SportsFantasy.sol:338"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => bool)))"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(uint256 => mapping(uint256 => bool))"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))"
+            },
+            "t_contract(IERC20)432": {
+              "label": "contract IERC20"
+            },
+            "t_mapping(t_uint256,t_array(t_struct(Participant)4456_storage)dyn_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Participant[])"
+            },
+            "t_array(t_struct(Participant)4456_storage)dyn_storage": {
+              "label": "struct SportsFantasy.Participant[]"
+            },
+            "t_struct(Participant)4456_storage": {
+              "label": "struct SportsFantasy.Participant",
+              "members": [
+                {
+                  "label": "_add",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_points",
+                  "type": "t_uint256"
+                }
+              ]
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_mapping(t_uint256,t_struct(Question)4447_storage)": {
+              "label": "mapping(uint256 => struct SportsFantasy.Question)"
+            },
+            "t_struct(Question)4447_storage": {
+              "label": "struct SportsFantasy.Question",
+              "members": [
+                {
+                  "label": "author",
+                  "type": "t_address"
+                },
+                {
+                  "label": "_type",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "qcontent",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "vote_price",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "correct_ans_id",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "options",
+                  "type": "t_array(t_struct(Option)4396_storage)6_storage"
+                },
+                {
+                  "label": "totalCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "winners",
+                  "type": "t_array(t_address)dyn_storage"
+                },
+                {
+                  "label": "winnersnames",
+                  "type": "t_array(t_string_storage)dyn_storage"
+                },
+                {
+                  "label": "correct_answer_str",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "correct_ans_reason",
+                  "type": "t_string_storage"
+                },
+                {
+                  "label": "distributed_each",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "totalWinners",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "status",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "stopped",
+                  "type": "t_bool"
+                },
+                {
+                  "label": "declared_result",
+                  "type": "t_bool"
+                }
+              ]
+            },
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_array(t_struct(Option)4396_storage)6_storage": {
+              "label": "struct SportsFantasy.Option[6]"
+            },
+            "t_struct(Option)4396_storage": {
+              "label": "struct SportsFantasy.Option",
+              "members": [
+                {
+                  "label": "name",
+                  "type": "t_uint8"
+                },
+                {
+                  "label": "voteCount",
+                  "type": "t_uint256"
+                },
+                {
+                  "label": "voters",
+                  "type": "t_array(t_address)dyn_storage"
+                }
+              ]
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            },
+            "t_array(t_string_storage)dyn_storage": {
+              "label": "string[]"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_string_storage)": {
+              "label": "mapping(address => string)"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    }
+  ]
+}

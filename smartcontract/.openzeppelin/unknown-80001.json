@@ -1,0 +1,274 @@
+{
+  "manifestVersion": "3.1",
+  "impls": {
+    "d5483a250d84ff29442ae346dd864a1a3bf120627ed548e4c3d6bd62f6a91937": {
+      "address": "0xbb56269a7F88c1fFB8aeaf42c857dbDaA02d4471",
+      "txHash": "0x7e9cd9771b5c46b4bddcc06b7c605f214e0cc763efc6d6640350a50047bb1ca2",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "contracts/Initializable.sol:25"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "contracts/Initializable.sol:30"
+          },
+          {
+            "contract": "EIP712BaseUpg",
+            "label": "domainSeperator",
+            "type": "t_bytes32",
+            "src": "contracts/EIP712BaseUpg.sol:17"
+          },
+          {
+            "contract": "EIP712MetaTxnUpg",
+            "label": "nonces",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/EIP712MetaTxnUpg.sol:16"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "optionsSelected",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))",
+            "src": "contracts/SportsFantasy.sol:20"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "rewardProvided",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "src": "contracts/SportsFantasy.sol:23"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "feeAddress",
+            "type": "t_address",
+            "src": "contracts/SportsFantasy.sol:44"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "sdToken",
+            "type": "t_contract(IERC20)432",
+            "src": "contracts/SportsFantasy.sol:46"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "allContestParticipants",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)",
+            "src": "contracts/SportsFantasy.sol:52"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "rankParticipants",
+            "type": "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)",
+            "src": "contracts/SportsFantasy.sol:55"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "balanceOf",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "contracts/SportsFantasy.sol:57"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "questions",
+            "type": "t_mapping(t_uint256,t_struct(Question)2401_storage)",
+            "src": "contracts/SportsFantasy.sol:60"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "naam",
+            "type": "t_mapping(t_address,t_string_storage)",
+            "src": "contracts/SportsFantasy.sol:62"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "manager",
+            "type": "t_address",
+            "src": "contracts/SportsFantasy.sol:336"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "Admins",
+            "type": "t_array(t_address)dyn_storage",
+            "src": "contracts/SportsFantasy.sol:337"
+          },
+          {
+            "contract": "SportsFantasy",
+            "label": "AdminByAddress",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "contracts/SportsFantasy.sol:338"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+            "label": "mapping(address => mapping(uint256 => mapping(uint256 => bool)))"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(uint256 => mapping(uint256 => bool))"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(address => mapping(uint256 => bool))"
+          },
+          "t_contract(IERC20)432": {
+            "label": "contract IERC20"
+          },
+          "t_mapping(t_uint256,t_array(t_struct(Participant)2410_storage)dyn_storage)": {
+            "label": "mapping(uint256 => struct SportsFantasy.Participant[])"
+          },
+          "t_array(t_struct(Participant)2410_storage)dyn_storage": {
+            "label": "struct SportsFantasy.Participant[]"
+          },
+          "t_struct(Participant)2410_storage": {
+            "label": "struct SportsFantasy.Participant",
+            "members": [
+              {
+                "label": "_add",
+                "type": "t_address"
+              },
+              {
+                "label": "_points",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_uint256,t_struct(Question)2401_storage)": {
+            "label": "mapping(uint256 => struct SportsFantasy.Question)"
+          },
+          "t_struct(Question)2401_storage": {
+            "label": "struct SportsFantasy.Question",
+            "members": [
+              {
+                "label": "author",
+                "type": "t_address"
+              },
+              {
+                "label": "_type",
+                "type": "t_uint256"
+              },
+              {
+                "label": "qcontent",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "vote_price",
+                "type": "t_uint256"
+              },
+              {
+                "label": "correct_ans_id",
+                "type": "t_uint256"
+              },
+              {
+                "label": "options",
+                "type": "t_array(t_struct(Option)2350_storage)6_storage"
+              },
+              {
+                "label": "totalCount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "winners",
+                "type": "t_array(t_address)dyn_storage"
+              },
+              {
+                "label": "winnersnames",
+                "type": "t_array(t_string_storage)dyn_storage"
+              },
+              {
+                "label": "correct_answer_str",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "correct_ans_reason",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "distributed_each",
+                "type": "t_uint256"
+              },
+              {
+                "label": "totalWinners",
+                "type": "t_uint256"
+              },
+              {
+                "label": "status",
+                "type": "t_bool"
+              },
+              {
+                "label": "stopped",
+                "type": "t_bool"
+              },
+              {
+                "label": "declared_result",
+                "type": "t_bool"
+              }
+            ]
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_struct(Option)2350_storage)6_storage": {
+            "label": "struct SportsFantasy.Option[6]"
+          },
+          "t_struct(Option)2350_storage": {
+            "label": "struct SportsFantasy.Option",
+            "members": [
+              {
+                "label": "name",
+                "type": "t_uint8"
+              },
+              {
+                "label": "voteCount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "voters",
+                "type": "t_array(t_address)dyn_storage"
+              }
+            ]
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_array(t_string_storage)dyn_storage": {
+            "label": "string[]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_mapping(t_address,t_string_storage)": {
+            "label": "mapping(address => string)"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bytes32": {
+            "label": "bytes32"
+          }
+        }
+      }
+    }
+  },
+  "admin": {
+    "address": "0x50DBE217d40524267cEB6c9E8d544Dece4a5BeAd",
+    "txHash": "0x83c1ac1d8be86171a40fc74bf4f2565fbed45c3a015639ca66f62ee243c3b3fb"
+  }
+}

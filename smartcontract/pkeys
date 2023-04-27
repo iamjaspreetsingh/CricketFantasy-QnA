@@ -1,0 +1,29 @@
+Admins & facilitator pub keys:
+admin1 = 0x8517E3aAe159965068219E523026B91D8aCaeb1f
+admin2 = 0x0A2242b3406dC378EA5E9bA1C1a0F7C220152F6d
+admin3 = 0x8517E3aAe159965068219E523026B91D8aCaeb1f
+admin4 = 0x5c875Ba0dd8D2a7f2d23B54a145AEF3efdbDFab6
+
+f1 = 0x1676F7E820816b6A5dfCFB5F1caFdac5D75CC851 
+f2 = 0xd196e5091b926559a0a9722382e5f407e58b1d34
+f3 = 0x5884EDC0802dDF15C8de64E679c370Cf783F86e3
+f4 = 0x056e967750F8C1221f8Ab257aBdC1243E24288DF
+
+Admin priv keys:
+admin1- 33ab8ff183476f3168050641373c54dc05b9910f8c7d419c1cd6224db4188c36
+admin2- 5a547ec5d49d14d8f7c6a8ee4feb2e3b6f8a84f14fc44931d2ce5f71116226f8
+admin3- e47d565eb3b976d9ecdcd576f7b27067c25b7b53145d24274b558b978fc54ec5
+admin4- 181ffd541bd1f96dff5cd68c9caab761f94b1f872b27ef9d4b525ffbfe02b28d
+
+facilitator priv keys:
+f1- be14e8033ca7636453d385d6bab0d53f379f1a2f451d7f8aee8bd9bcd5aba7c8
+f2- b4b5d9d456421599e5cc2b559c4c14745c5115fd273e6bf0ac793594ba9608d4
+f3- 67989a9b477b9f3155ce2cc6c19e29f0ea322a1ec9b1ea299340cd54ec42126f
+f4- 419f9fcbfa0af5369ea988859fb750bb7b820c6ead389bcff0da3dd725b63fdf
+
+submitsolution - use admin1, admin2, admin3 ,
+qidwinning- f4
+submitPoints - use admin3
+postquestion - use f1, f2
+other team functions (like updatePoints, verifySort, receiveReward since all txns happen in serial way) - use f3
+updatePoints->verifySort->receiveReward
