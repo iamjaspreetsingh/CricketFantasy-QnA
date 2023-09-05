@@ -1,6 +1,6 @@
 # Cricket Fantasy - QnA
 
-I did this project as part of my dissertation for My Master's degree from BITS Pilani. I received Excellent grade (highest) for it. In this project, our primary goal is to develop NoSQL architecture via APIs where we create questions and find answers. On top of it we have integrated smart contracts so that users participating in questions have fair transparency of all the transactions. 
+I did this project as part of my dissertation for My Master's degree from BITS Pilani. I received Excellent grade (highest) for it. In this project, my primary goal was to develop NoSQL architecture via APIs where system auto generates questions, find answers and rewards winners. On top of it we have integrated smart contracts so that users participating in questions have fair transparency of all the transactions. 
 
 [View Presentation](https://github.com/iamjaspreetsingh/CricketFantasy-QnA/blob/master/Presentation.pdf)
 
